@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ePort Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <h1>ePort.</h1>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">
+                <span>Devices</span>
+                <span class="nav-count">12</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span>Console</span>
+            </a>
+        </nav>
+
+        <!-- Bottom Section -->
+        <div class="sidebar-bottom">
+            <div class="sidebar-links">
+                <a href="#" class="nav-item">
+                    <span>Help & documentation</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <header class="page-header">
+            <div>
+                <h1>Devices</h1>
+            </div>
+        </header>
+
+        <!-- Dashboard Panels -->
+        <div class="dashboard-layout">
+            <!-- Left Panel: Device List -->
+            <section class="devices-panel">
+            </section>
+
+            <!-- Right Panel: Device Details -->
+            <section class="details-panel">
+            </section>
+        </div>
+    </main>
+</body>
+</html>
