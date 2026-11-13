@@ -145,17 +145,6 @@ body {
     text-overflow: ellipsis;
 }
 
-.nav-count {
-    margin-left: auto;
-    padding: 2px 6px;
-    border-radius: 4px;
-    background-color: #d0e6dc;
-    color: #14785e;
-    font-size: 10px;
-    font-weight: 700;
-    flex-shrink: 0;
-}
-
 /* Bottom area */
 .sidebar-bottom {
     margin-top: auto;
@@ -167,8 +156,7 @@ body {
 
 /* Collapsed state */
 .sidebar.collapsed .sidebar-brand,
-.sidebar.collapsed .nav-label,
-.sidebar.collapsed .nav-count {
+.sidebar.collapsed .nav-label {
     display: none;
 }
 
@@ -241,4 +229,130 @@ body {
     .nav-item {
         transition: none;
     }
+}
+
+
+/* --- DEVICES PANEL --- */
+.devices-panel {
+    overflow: hidden;
+}
+
+/* Header */
+.devices-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 22px;
+}
+
+.devices-header-row h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #172c3c;
+}
+
+/* Connect Button */
+.connect-btn {
+    padding: 9px 11px;
+    border: none;
+    border-radius: 8px;
+    background-color: #16866c;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.connect-btn:hover {
+    background-color: #106d57;
+}
+
+/* Search */
+.devices-search {
+    padding: 0 22px 20px;
+}
+
+.devices-search input {
+    width: 100%;
+    height: 35px;
+    padding: 0 12px;
+    border: 1px solid #e4e9ed;
+    border-radius: 6px;
+    outline: none;
+    background-color: #ffffff;
+    color: #172c3c;
+    font-family: inherit;
+    font-size: 12px;
+    transition: border-color 0.2s ease;
+}
+.devices-search input::placeholder {
+    color: #9aa8b2;
+}
+.devices-search input:focus {
+    border-color: #9e9e9e;
+}
+
+/* Table */
+.devices-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.devices-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.devices-table th {
+    padding: 13px 16px;
+
+    background-color: #f8fafb;
+    border-top: 1px solid #edf0f2;
+    border-bottom: 1px solid #edf0f2;
+
+    color: #8a9aa5;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.devices-table td {
+    padding: 15px 16px;
+
+    border-bottom: 1px solid #edf0f2;
+
+    color: #465a66;
+    font-size: 11px;
+}
+
+.devices-table tbody tr:hover {
+    background-color: #f8fbf9;
+}
+
+.devices-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Device Name */
+
+.device-name {
+    color: #172c3c;
+    font-weight: 600;
+}
+
+/* Empty / Loading State */
+
+.table-message {
+    padding: 32px 16px !important;
+    text-align: center;
+    color: #91a0ab !important;
+}
+
+/* Keyboard focus */
+
+.connect-btn:focus-visible {
+    outline: 2px solid #08785f;
+    outline-offset: 2px;
 }

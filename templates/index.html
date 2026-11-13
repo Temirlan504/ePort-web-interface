@@ -44,7 +44,6 @@
                     </svg>
                 </span>
                 <span class="nav-label">Devices</span>
-                <span class="nav-count">12</span>
             </a>
             <a href="#" class="nav-item"
                aria-label="Console"
@@ -77,8 +76,54 @@
         </header>
 
         <div class="dashboard-layout">
-            <section class="devices-panel" aria-label="Device list"></section>
-            <section class="details-panel" aria-label="Device details"></section>
+            <!-- Panel 1: Device list -->
+            <section class="devices-panel" aria-label="Device list">
+                <!-- Header -->
+                <div class="devices-header-row">
+                    <h2>All devices</h2>
+                    <button class="connect-btn" id="connectBtn" type="button">
+                        CONNECT
+                    </button>
+                </div>
+
+                <!-- Search -->
+                <div class="devices-search">
+                    <input
+                        type="search"
+                        id="deviceSearch"
+                        placeholder="Search devices..."
+                        aria-label="Search devices"
+                    >
+                </div>
+
+                <!-- Device Table -->
+                <div class="devices-table-wrapper">
+                    <table class="devices-table">
+                        <thead>
+                            <tr>
+                                <th>Device</th>
+                                <th>Type</th>
+                                <th>Serial</th>
+                                <th>Firmware</th>
+                                <th>Hardware</th>
+                                <th>Uptime</th>
+                            </tr>
+                        </thead>
+                        <tbody id="devicesTableBody">
+                            <tr>
+                                <td colspan="6" class="table-message">
+                                    No devices found
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Panel 2: Device detailes -->
+            <section class="details-panel" aria-label="Device details">
+
+            </section>
         </div>
     </main>
 </body>
